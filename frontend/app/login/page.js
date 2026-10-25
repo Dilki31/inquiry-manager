@@ -35,39 +35,47 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="container" style={{ maxWidth: 380, marginTop: '10vh' }}>
-      <h1>Sign in</h1>
-      <form onSubmit={handleSubmit} noValidate>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          autoComplete="username"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          style={{ display: 'block', width: '100%', marginBottom: 12 }}
-        />
-
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          autoComplete="current-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          style={{ display: 'block', width: '100%', marginBottom: 12 }}
-        />
+    <main className="auth-wrap">
+      <div className="auth-card">
+        <h1>Inquiry Manager</h1>
+        <p className="muted" style={{ margin: '0 0 24px' }}>
+          Sign in to manage customer inquiries.
+        </p>
 
         {error && (
-          <p role="alert" style={{ color: '#b00020' }}>
+          <div className="banner banner-error" role="alert">
             {error}
-          </p>
+          </div>
         )}
 
-        <button type="submit" disabled={submitting}>
-          {submitting ? 'Signing in…' : 'Sign in'}
-        </button>
-      </form>
+        <form onSubmit={handleSubmit} noValidate>
+          <div className="field">
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              autoComplete="username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+
+          <div className="field">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              autoComplete="current-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          <button type="submit" className="btn-primary" disabled={submitting}>
+            {submitting ? 'Signing in…' : 'Sign in'}
+          </button>
+        </form>
+      </div>
     </main>
   );
 }

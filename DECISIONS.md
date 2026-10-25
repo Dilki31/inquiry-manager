@@ -50,5 +50,15 @@ assessment needs.
 
 ## Use of AI
 
-I used Claude as a guide while building this. It suggested the project structure, the version
-column for stale data, and returning 404 for unauthorised access. I can explain every part of the code. I understood how to buld this system using Claude and It helped me to develop and complete this task.
+I used Claude as a guide while building this. It suggested the overall structure, the `version`
+column for stale-data handling, and returning 404 instead of 403 for inquiries a user cannot see.
+
+- **Accepted:** the `version` check. I understand it: the UPDATE only matches when the version
+  I sent is still current, so two tabs cannot silently overwrite each other.
+- **Changed:** I first used a personal password as `JWT_SECRET`. I replaced it with a random
+  48-byte value, because anyone who guesses the secret can forge tokens for any user.
+- **Changed:** the generated validation messages used an option that does not exist in the
+  zod version I installed, so I switched to the `error` option and checked the messages in
+  the API responses.
+
+I can explain every part of the code.

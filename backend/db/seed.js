@@ -5,9 +5,9 @@ const SALT_ROUNDS = 12;
 
 // Demo accounts for local development only. Documented in the README.
 const users = [
-  { email: 'admin@coffeeninja.test', fullName: 'Admin User', role: 'admin', password: 'Admin@12345' },
-  { email: 'staff1@coffeeninja.test', fullName: 'Staff One', role: 'staff', password: 'Staff@12345' },
-  { email: 'staff2@coffeeninja.test', fullName: 'Staff Two', role: 'staff', password: 'Staff@12345' },
+  { email: 'admin@example.test', fullName: 'Admin User', role: 'admin', password: 'Admin@12345' },
+  { email: 'staff1@example.test', fullName: 'Staff One', role: 'staff', password: 'Staff@12345' },
+  { email: 'staff2@example.test', fullName: 'Staff Two', role: 'staff', password: 'Staff@12345' },
 ];
 
 async function seed() {

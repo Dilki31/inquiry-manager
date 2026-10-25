@@ -72,9 +72,9 @@ Created by `npm run seed` (local development only):
 
 | Role  | Email                    | Password     |
 |-------|--------------------------|--------------|
-| Staff | staff1@coffeeninja.test  | Staff@12345  |
-| Staff | staff2@coffeeninja.test  | Staff@12345  |
-| Admin | admin@coffeeninja.test   | Admin@12345  |
+| Staff | staff1@example.test  | Staff@12345  |
+| Staff | staff2@example.test  | Staff@12345  |
+| Admin | admin@example.test   | Admin@12345  |
 
 ## Running tests
 
